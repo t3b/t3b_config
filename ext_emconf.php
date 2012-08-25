@@ -11,7 +11,7 @@
 ########################################################################
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Nordkirche Common',
+	'title' => 'TYPO3 Base Configuration',
 	'description' => 'Basic configuration of the TYPO3 CMS.',
 	'category' => 'plugin',
 	'author' => 'Thorsten Boock',
