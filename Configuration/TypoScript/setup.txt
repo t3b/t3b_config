@@ -1,0 +1,9 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TypoScript/General.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TypoScript/Page.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TypoScript/Language.txt">
+
+# include Development.txt if the application environment is set to "development"
+# add "SetEnv APPLICATION_ENV development" to your vhost configuration or .htaccess file to do so
+[globalString = ENV:APPLICATION_ENV = development]
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TypoScript/Development.txt">
+[global]

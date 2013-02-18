@@ -1,0 +1,21 @@
+plugin.t3b_config {
+	settings {
+		general {
+			# the base URL to set without the protocol to use
+			# beware, depending on your servers configuration, an attacker may can inject a malicious base URL in the cache, if you use getIndpEnv:TYPO3_HOST_ONLY here
+			baseUrlWithoutProtocol = localhost/
+		}
+		page {
+			shortcutIcon = EXT:t3b_config/ext_icon.gif
+		}
+	}
+
+	environment {
+		# the protocol used to retrieve the current page (http or https)
+		protocol = http
+	}
+}
+
+[globalString = IENV:TYPO3_SSL = 1]
+	plugin.t3b_config.environment.protocol = https
+[global]
