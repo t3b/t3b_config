@@ -1,0 +1,10 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TypoScript/Includes/General.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TypoScript/Includes/Page.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TypoScript/Includes/Language.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TypoScript/Includes/Library.ts">
+
+# include Development.ts if the application environment is set to "development"
+# add "SetEnv APPLICATION_ENV development" to your vhost configuration or .htaccess file to do so
+[globalString = ENV:APPLICATION_ENV = development]
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TypoScript/Includes/Development.ts">
+[global]
