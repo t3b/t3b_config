@@ -28,9 +28,6 @@ config {
 	# when creating links, prepend the document path before anchors (needed because of the base tag)
 	prefixLocalAnchors = all
 
-	# remove the default page title. we use our own in Page.txt
-	noPageTitle = 2
-
 	# disable the preview notification, because it may breaks the layout
 	disablePreviewNotification = 1
 
