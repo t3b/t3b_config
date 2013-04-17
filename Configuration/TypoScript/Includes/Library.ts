@@ -10,7 +10,7 @@ lib.t3b_config {
 		complete {
 			1 = TMENU
 			1 {
-				wrap = <ul class="level-1">|</ul>
+				wrap = <ul class="complete">|</ul>
 
 				NO = 1
 				NO {
@@ -67,7 +67,7 @@ lib.t3b_config {
 			4 < .1
 			4.wrap = <ul class="level-4">|</ul>
 
-			wrap = <nav class="complete-navigation">|</nav>
+			wrap = <nav role="navigation">|</nav>
 		}
 
 		# simple first level navigation, e.g. for the page header
@@ -86,7 +86,7 @@ lib.t3b_config {
 					ATagParams = class="active"
 					allWrap = <li class="first active page-{field:uid}">|</li> |*| <li class="active page-{field:uid}">|</li> |*| <li class="last active page-{field:uid}">|</li>
 				}
-				wrap = <nav class="first-level-navigation"><ul>|</ul></nav>
+				wrap = <nav role="navigation"><ul class="first-level">|</ul></nav>
 			}
 		}
 
@@ -94,7 +94,24 @@ lib.t3b_config {
 		secondLevel < .firstLevel
 		secondLevel {
 			  entryLevel = 1
-              1.wrap = <nav class="second-level-navigation"><ul>|</ul></nav>
+              1.wrap = <nav role="navigation"><ul class="second-level">|</ul></nav>
+		}
+
+		# very simple breadcrumb
+		breadcrumb = HMENU
+		breadcrumb {
+			special = rootline
+			special.range = 0|-1
+			entryLevel = 0
+			1 = TMENU
+			1 {
+				noBlur = 1
+				NO.allWrap = <li>|</li>
+				ACT < .NO
+				ACT = 1
+				ACT.ATagParams = class="active"
+			}
+			wrap = <nav role="navigation"><ul class="breadcrumb">|</ul></nav>
 		}
 	}
 
