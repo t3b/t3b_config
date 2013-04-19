@@ -4,7 +4,7 @@ if (!defined('TYPO3_MODE')) {
 	die('Access denied.');
 }
 
-$extensionPath = t3lib_extMgm::extPath($_EXTKEY);
+$extensionPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY);
 $configurationVariablesPath = $extensionPath . 'Configuration/ConfigurationVariables/';
 
 include_once($configurationVariablesPath . 'Typo3/System.php');
