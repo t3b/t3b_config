@@ -70,10 +70,8 @@ lib.t3b_config {
 			wrap = <nav role="navigation">|</nav>
 		}
 
-		# simple first level navigation, e.g. for the page header
-		firstLevel = HMENU
-		firstLevel {
-			entryLevel = 0
+		singleLevel = HMENU
+		singleLevel {
 			1 = TMENU
 			1 {
 				NO {
@@ -86,8 +84,15 @@ lib.t3b_config {
 					ATagParams = class="active"
 					allWrap = <li class="first active page-{field:uid}">|</li> |*| <li class="active page-{field:uid}">|</li> |*| <li class="last active page-{field:uid}">|</li>
 				}
-				wrap = <nav role="navigation"><ul class="first-level">|</ul></nav>
+				wrap = <nav role="navigation"><ul class="single-level">|</ul></nav>
 			}
+		}
+
+		# simple first level navigation, e.g. for the page header
+		firstLevel < .singleLevel
+		firstLevel {
+			entryLevel = 0
+			1.wrap = <nav role="navigation"><ul class="first-level">|</ul></nav>
 		}
 
 		# very simple second level navigation, e.g. for the page header
