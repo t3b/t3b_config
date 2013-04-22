@@ -21,6 +21,9 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['displayErrors'] = 1;
 // display failed database queries
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['sqlDebug'] = 1;
 
+// display an error message, when a 404 error occurs
+$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = 1;
+
 /****************************************************
  *	Logging
  ****************************************************/
