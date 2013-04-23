@@ -4,6 +4,18 @@ config {
 
 	# output debug information (stdWrap: debug, debugFunc, debugData | GMENU, TMENU, IMGMENU: debugItemConf)
 	debug = 1
+
+	# do not compress javascript
+	compressJs = 0
+
+	# do not compress CSS
+	compressCss = 0
+
+	# do not concatenate javascript
+	concatenateJs = 0
+
+	# do not concatenate css
+	concatenateCss = 0
 }
 
 # display a small development environment notice
