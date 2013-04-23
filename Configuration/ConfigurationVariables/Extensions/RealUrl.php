@@ -15,28 +15,19 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array(
 		'redirects' => array(
 		),
 		'preVars' => array(
-			'0' => array(
+			array(
 				'GETvar' => 'no_cache',
 				'valueMap' => array(
 					'nc' => '1',
 				),
 				'noMatch' => 'bypass'
 			),
-			'1' => array(
+			array(
 				'GETvar' => 'L',
 				'valueMap' => array(
 					'en' => '0',
 					'de' => '1',
 					'fr' => '2',
-				),
-				'noMatch' => 'bypass',
-			),
-			'2' => array(
-				'GETvar' => 'lang',
-				'valueMap' => array(
-					'en' => 'en',
-					'de' => 'de',
-					'fr' => 'fr',
 				),
 				'noMatch' => 'bypass',
 			),

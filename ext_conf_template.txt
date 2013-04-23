@@ -1,0 +1,2 @@
+# cat=basic; type=boolean; label=Include default realurl configuration:Enable this to include the RealURL configuration shipped with this extension. Don't forget to uncheck "Enable automatic configuration" in the configuration dialog of RealURL!
+includeDefaultRealurlConfiguration = 0

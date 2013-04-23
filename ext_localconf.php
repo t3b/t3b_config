@@ -4,6 +4,7 @@ if (!defined('TYPO3_MODE')) {
 	die('Access denied.');
 }
 
+$extensionConfiguration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['t3b_config']);
 $extensionPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY);
 $configurationVariablesPath = $extensionPath . 'Configuration/ConfigurationVariables/';
 
@@ -14,4 +15,6 @@ if (TYPO3_MODE == 'BE') {
 if (getenv('APPLICATION_ENV') == 'development') {
 	include_once($configurationVariablesPath . 'Typo3/Development.php');
 }
-include_once($configurationVariablesPath . 'Extensions/RealUrl.php');
+if ($extensionConfiguration['includeDefaultRealurlConfiguration']) {
+	include_once($configurationVariablesPath . 'Extensions/RealUrl.php');
+}
