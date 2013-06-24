@@ -112,9 +112,9 @@ lib.t3b_config {
 			1 {
 				noBlur = 1
 				NO.allWrap = <li>|</li>
-				ACT < .NO
-				ACT = 1
-				ACT.ATagParams = class="active"
+				CUR < .NO
+				CUR = 1
+				CUR.ATagParams = class="active"
 			}
 			wrap = <nav role="navigation"><ul class="breadcrumb">|</ul></nav>
 		}
