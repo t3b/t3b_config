@@ -7,6 +7,42 @@ config {
 	# HTML 5 doctype
 	doctype = html5
 
+	# add modernizr specific classes to the html tag
+	htmlTag_stdWrap {
+		setContentToCurrent = 1
+		cObject = COA
+		cObject {
+			10 = TEXT
+			10 {
+				current = 1
+				addParams.class = no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7
+				wrap = <!--[if lt IE 7 ]>|<![endif]-->
+				append = TEXT
+                append.char = 10
+			}
+			20 < .10
+			20 {
+				addParams.class = no-js lt-ie10 lt-ie9 lt-ie8
+				wrap = <!--[if IE 7 ]>|<![endif]-->
+			}
+			30 < .10
+			30 {
+				addParams.class = no-js lt-ie10 lt-ie9
+				wrap = <!--[if IE 8 ]>|<![endif]-->
+			}
+			40 < .10
+			40 {
+				addParams.class = no-js lt-ie10
+				wrap = <!--[if IE 9 ]>|<![endif]-->
+			}
+			50 < .10
+			50 {
+				addParams.class = no-js
+				wrap = <!--[if gt IE 9]><!-->|<!--<![endif]-->
+			}
+		}
+	}
+
 	# remove the unnecessary XML prologue
 	xmlprologue = none
 
