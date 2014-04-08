@@ -8,5 +8,5 @@ if (!defined('TYPO3_MODE')) {
  *	Page- and User-TS
  ****************************************************/
 
-$GLOBALS['TYPO3_CONF_VARS']['BE']['defaultPageTSconfig'] .= LF . '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TSConfig/Page.ts">';
-$GLOBALS['TYPO3_CONF_VARS']['BE']['defaultUserTSconfig'] .= LF . '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TSConfig/User.ts">';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TSConfig/Page.ts">');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TSConfig/User.ts">');
