@@ -36,6 +36,23 @@ page {
 			data = page:author
 			ifEmpty.data = levelfield:0, author
 		}
+
+		# set the robots meta tag value according to the drop down option selected by the user
+		robots {
+			stdWrap.cObject = CASE
+			stdWrap.cObject {
+				key.data = page:tx_t3bconfig_robots
+
+				1 = TEXT
+				1.value = index,nofollow
+
+				2 = TEXT
+				2.value = noindex,follow
+
+				3 = TEXT
+				3.value = noindex,nofollow
+			}
+		}
 	}
 
 	shortcutIcon = {$plugin.t3b_config.settings.page.shortcutIcon}

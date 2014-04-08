@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-04-08T12:12:00Z" product-name="t3b_config">
+		<header/>
+		<body>
+			<trans-unit id="pages.tx_t3bconfig_robots" xml:space="preserve">
+				<source>Whether robots should index this page and follow links</source>
+			</trans-unit>
+			<trans-unit id="pages.tx_t3bconfig_robots.default" xml:space="preserve">
+				<source>Default (index, follow links / consult robots.txt)</source>
+			</trans-unit>
+			<trans-unit id="pages.tx_t3bconfig_robots.index_nofollow" xml:space="preserve">
+				<source>Index, don't follow links</source>
+			</trans-unit>
+			<trans-unit id="pages.tx_t3bconfig_robots.noindex_follow" xml:space="preserve">
+				<source>Don't index, follow links</source>
+			</trans-unit>
+			<trans-unit id="pages.tx_t3bconfig_robots.noindex_nofollow" xml:space="preserve">
+				<source>Don't index, don't follow links</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
