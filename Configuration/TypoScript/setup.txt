@@ -3,8 +3,9 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TypoScript/Includes/Language.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TypoScript/Includes/Library.ts">
 
-# include Development.ts if the application environment is set to "development"
-# add "SetEnv APPLICATION_ENV development" to your vhost configuration or .htaccess file to do so
-[globalString = ENV:APPLICATION_ENV = development]
+# Include Development.ts if the TYPO3 parent context is "Development".
+# Take a look at the default _.htaccess file to find out how to enable this based on the hostname or
+# add "SetEnv TYPO3_CONTEXT Development" to your apache configuration / .htaccess file.
+[applicationContext = Development*]
 	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3b_config/Configuration/TypoScript/Includes/Development.ts">
 [global]

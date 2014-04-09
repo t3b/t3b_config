@@ -12,7 +12,7 @@ include_once($configurationVariablesPath . 'Typo3/System.php');
 if (TYPO3_MODE == 'BE') {
 	include_once($configurationVariablesPath . 'Typo3/Backend.php');
 }
-if (getenv('APPLICATION_ENV') == 'development') {
+if (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopment()) {
 	include_once($configurationVariablesPath . 'Typo3/Development.php');
 }
 if ($extensionConfiguration['includeDefaultRealurlConfiguration']) {
