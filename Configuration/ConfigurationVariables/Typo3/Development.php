@@ -36,24 +36,3 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['enable_exceptionDLOG'] = TRUE;
 
 // write deprecation messages to a log file
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['enableDeprecationLog'] = 'file';
-
-/****************************************************
- *	Caching
- ****************************************************/
-
-// disable ext_localconf and ext_tables caching
-$GLOBALS['TYPO3_CONF_VARS']['EXT']['extCache'] = 0;
-
-// disable phpcode caching
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_phpcode']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
-
-// disable the translation cache
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['lang']['cache']['lifetime'] = 0;
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3lib_l10n']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
-
-// disable extbase caching
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['extbase_reflection']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['extbase_object']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
-
-// disable fluid caching
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['fluid_template']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
