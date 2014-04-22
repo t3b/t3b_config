@@ -1,0 +1,5 @@
+{
+	"name": "t3b/t3b_config",
+	"description": "Basic configuration of the TYPO3 CMS.",
+	"type": "typo3-cms-extension"
+}
