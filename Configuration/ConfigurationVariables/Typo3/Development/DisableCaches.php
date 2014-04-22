@@ -29,7 +29,9 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['extbase_re
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['extbase_object']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
 
 // disable fluid caching
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['fluid_template']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
+if (isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['fluid_template'])) {
+	$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['fluid_template']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
+}
 
 // disable caching of ext_localconf, ext_tables, autoloader etc
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_core']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
