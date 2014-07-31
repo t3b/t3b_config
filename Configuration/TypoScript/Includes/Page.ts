@@ -58,15 +58,19 @@ page {
 	shortcutIcon = {$plugin.t3b_config.settings.page.shortcutIcon}
 
 	# body tag with additional classes to target the current page, language or template in your own stylesheets
-	bodyTagCObject = TEXT
+	bodyTagCObject = COA
 	bodyTagCObject {
-		field = backend_layout
-		ifEmpty.cObject = TEXT
-		ifEmpty.cObject {
-			data = levelfield:-2, backend_layout_next_level, slide
-			ifEmpty = 0
+		10 = TEXT
+		10 {
+			field = backend_layout
+			ifEmpty.cObject = TEXT
+			ifEmpty.cObject {
+				data = levelfield:-2, backend_layout_next_level, slide
+				ifEmpty = 0
+			}
+			noTrimWrap = | template-||
 		}
-		dataWrap = <body class="page-{page:uid} lang-{TSFE:sys_language_uid} template-|">
+		stdWrap.dataWrap = <body class="page-{page:uid} lang-{TSFE:sys_language_uid} |">
 	}
 
 }
