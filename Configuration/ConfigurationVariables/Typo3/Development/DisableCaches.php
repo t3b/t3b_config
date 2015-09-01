@@ -43,7 +43,11 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_page
 // you will want to disable op caches for development purposes.
 // if you forgot doing this, we're glad to help you out.
 // @todo this probably should be done somewhere else
-\TYPO3\CMS\Core\Utility\OpcodeCacheUtility::clearAllActive();
+if (version_compare(TYPO3_version, '7.4.0', '<')) {
+	\TYPO3\CMS\Core\Utility\OpcodeCacheUtility::clearAllActive();
+} else {
+	\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Service\OpcodeCacheService::class)->clearAllActive();
+}
 if (extension_loaded('Zend OPcache') && ini_get('opcache.enable')) {
 	ini_set('opcache.enable', 0);
 }
