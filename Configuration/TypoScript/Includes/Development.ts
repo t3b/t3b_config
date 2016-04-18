@@ -16,6 +16,9 @@ config {
 
 	# do not concatenate css
 	concatenateCss = 0
+
+	# Use 1 for the default exception handler (enabled by default in production context)
+	contentObjectExceptionHandler = 0
 }
 
 # display a small development environment notice
